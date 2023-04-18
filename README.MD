@@ -1,15 +1,16 @@
 # mCommands
 
 An advanced general purpose command dispatching framework
-designed using OOP concepts.
+designed using OOP concepts and Java 17.
 
-This library utilizes [Kyori Adventure](https://github.com/KyoriPowered/adventure) for
-messages and text styles
+This library utilizes [the Adventure library](https://github.com/KyoriPowered/adventure) for
+messages and text styles!
 
 ## Installation
 
-We have our own repo in maven central
-so all you have to do is like this:
+This library is hosted by Maven central so you don't need to add another repository!
+
+This is how you can add mCommands to your gradle project:
 
 ```gradle 
 repositories {
@@ -17,37 +18,21 @@ repositories {
 }
 
 dependencies {
-    implementation 'io.github.mqzn:mCommands-<platform>:1.0.1'
+    implementation 'io.github.mqzn:mCommands-annotations:1.0.1'
 }
 ```
 
-## Platforms
+## Why use mCommands when there are a LOT of other popular options?
+### Built with Java 17
+This project aims to support such newer java versions for a better code design and overall
 
-### Spigot
+provide better performance, maintainability, and to have better options to allow cleaner code.
 
-The spigot platform is for minecraft spigot api development
+### Development Time Friendly
+Unlike a lot of others, your command structure does NOT end up with 4 different annotations for Usages, Commands, Permissions and Descriptions, it is one for usage, and one for name + aliases, permission and description combined.
 
-```gradle
-implementation 'io.github.mqzn:mCommands-spigot:1.0.1'
-```
+You can also apply your OWN [custom senders](https://github.com/Mqzn/mCommands/wiki/Annotated-Commands#custom-command-senders) without a hassle!
 
-### Annotations
-
-This platform allows you to use annotations to declare and register your commands
-
-```gradle
-implementation 'io.github.mqzn:mCommands-annotations:1.0.1'
-```
-
-### Bungee
-
-This bungeecord platform is for minecraft bungeecord proxy api development, allows you
-to declare and register bungeecord commands.
-
-```gradle
-implementation 'io.github.mqzn:mCommands-bungee:1.0.1'
-```
-
-## Wiki
+## Q&A
 
 Wiki for mCommands is available [here](https://github.com/Mqzn/mCommands/wiki)
